@@ -1,13 +1,14 @@
 [tool.poetry]
 name = "maniaperfumaria"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Comtrole de vendas da Mania Perfumaria"
+authors = ["José Hermes Vieira Chaves <jhvc.hermes@yahoo.com.br>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 fastapi = {extras = ["standard"], version = "^0.114.1"}
+pydantic = {extras = ["email"], version = "^2.9.1"}
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
@@ -38,7 +39,7 @@ format = 'ruff check . --fix; ruff format .'
 run = 'fastapi dev maniaperfumaria/app.py --port 8001 --host 191.252.92.30'
 pre_test = 'task lint'
 test = 'pytest -s -x --cov=maniaperfumaria -vv'
-post_test = 'coverage html && cp -r htmlcov /var/www/html'
+post_test = 'coverage html && cp -r htmlcov /var/www/html/mp'
 
 [build-system]
 requires = ["poetry-core"]
