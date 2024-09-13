@@ -1,12 +1,8 @@
 from http import HTTPStatus
 
-from fastapi.testclient import TestClient
 
-from maniaperfumaria.app import app
-
-
-def test_root_deve_retornar_ok_e_meu_belissimo_mundo():
-    client = TestClient(app)  # Arrange
+def test_root_deve_retornar_ok_e_meu_belissimo_mundo(client):
+    # client = TestClient(app)  # Arrange
 
     response = client.get('/')  # Act
 
@@ -14,8 +10,8 @@ def test_root_deve_retornar_ok_e_meu_belissimo_mundo():
     assert response.json() == {'message': 'Meu belíssimo mundo!!!'}  # Assert
 
 
-def test_create_user():
-    client = TestClient(app)
+def test_create_user(client):
+    # client = TestClient(app)
 
     response = client.post(
         '/users/',
