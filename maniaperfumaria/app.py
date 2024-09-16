@@ -2,7 +2,7 @@ from http import HTTPStatus
 
 from fastapi import FastAPI, HTTPException
 
-from maniaperfumaria.schemas.schemas import (
+from maniaperfumaria.schemas import (
     Message,
     UserDB,
     UserList,
