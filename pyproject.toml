@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "maniaperfumaria"
 version = "0.1.0"
-description = "Comtrole de vendas da Mania Perfumaria"
+description = "Controle de vendas da Mania Perfumaria"
 authors = ["José Hermes Vieira Chaves <jhvc.hermes@yahoo.com.br>"]
 readme = "README.md"
 
